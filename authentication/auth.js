@@ -49,7 +49,7 @@ router.get(
 router.get(
   "/auth/google/callback",
   passport.authenticate("google", {
-    failureRedirect: "http://localhost:5173", // Frontend login page URL
+    failureRedirect: "https://content-flow-alpha.vercel.app", // Frontend login page URL
   }),
   async (req, res) => {
     // Successful authentication
@@ -74,7 +74,7 @@ router.get(
       await newuser.save();
     }
 
-    res.redirect("http://localhost:5173"); // Redirect to the frontend
+    res.redirect("https://content-flow-alpha.vercel.app"); // Redirect to the frontend
   }
 );
 
@@ -99,7 +99,7 @@ router.get("/auth/logout", (req, res) => {
     // Optionally clear the cookie as well
     res.clearCookie("connect.sid", { path: "/" });
     // Redirect the user to the frontend after logging out
-    //   res.redirect('http://localhost:5173');
+    //   res.redirect('https://content-flow-alpha.vercel.app');
     res.status(200).send("Logged out successfully");
   });
   console.log("logout");

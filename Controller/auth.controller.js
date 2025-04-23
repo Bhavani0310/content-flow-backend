@@ -36,7 +36,7 @@ exports.googleCallback = async (req, res) => {
     await newuser.save();
 
     const userId = newuser._id;
-    return res.redirect(`http://localhost:5173/orgDashboard?userId=${userId}`);
+    return res.redirect(`https://content-flow-alpha.vercel.app/orgDashboard?userId=${userId}`);
   }
 
   // Update tokens in case they're refreshed
@@ -49,7 +49,7 @@ exports.googleCallback = async (req, res) => {
   await user.save();
 
   const userId = user._id;
-  res.redirect(`http://localhost:5173/orgDashboard?userId=${userId}`);
+  res.redirect(`https://content-flow-alpha.vercel.app/orgDashboard?userId=${userId}`);
 };
 
 //Auth user
@@ -140,7 +140,7 @@ exports.handleLogout = async (req, res) => {
     // Optionally clear the cookie as well
     res.clearCookie("connect.sid", { path: "/" });
     // Redirect the user to the frontend after logging out
-    //   res.redirect('http://localhost:5173');
+    //   res.redirect('https://content-flow-alpha.vercel.app');
     res.status(200).send("Logged out successfully");
   });
   console.log("logout");

@@ -67,7 +67,7 @@ console.log(req.query)
 
     await org.save();
 
-    res.redirect(`http://localhost:5173/orgDashboard?userId=${org._id}&linkedinConnected=true`);
+    res.redirect(`https://content-flow-alpha.vercel.app/orgDashboard?userId=${org._id}&linkedinConnected=true`);
   } catch (error) {
     console.error("LinkedIn OpenID error:", error.response?.data || error.message);
     res.status(500).json({ error: "Failed to connect LinkedIn" });
@@ -143,7 +143,7 @@ console.log(pagesRes.data)
 
     await organizer.save();
 
-    res.redirect(`http://localhost:5173/orgDashboard?userId=${organizer._id}&instagramConnected=true`);
+    res.redirect(`https://content-flow-alpha.vercel.app/orgDashboard?userId=${organizer._id}&instagramConnected=true`);
   } catch (error) {
     console.error("Instagram OAuth Error:", error.response?.data || error.message);
     res.status(500).json({ error: "Instagram connection failed" });

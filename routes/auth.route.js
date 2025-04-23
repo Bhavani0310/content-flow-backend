@@ -105,7 +105,7 @@ router.get(
 router.get(
   "/auth/google/callback",
   passport.authenticate("google", {
-    failureRedirect: "http://localhost:5173", // Frontend login page URL
+    failureRedirect: "https://content-flow-alpha.vercel.app", // Frontend login page URL
   }),
   authController.googleCallback
 );
