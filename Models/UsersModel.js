@@ -25,7 +25,7 @@ const userSchema = new Schema({
   ],
   profileImageUrl: { type: String, default: "" },
   rating:{type:Number,default:0},
-  
+  isActive:{type:Boolean,default:0},
   assignedTasks: [{ type: Schema.Types.ObjectId, ref: "Task" }], // Only for editors
 
   createdAt: { type: Date, default: Date.now },
