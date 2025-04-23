@@ -16,7 +16,7 @@ passport.use(
     {
       clientID: process.env.GOOGLE_CLIENT_ID,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-      callbackURL: "http://localhost:4000/auth/google/callback",
+      callbackURL: "https://content-flow-backend.vercel.app/auth/google/callback",
     },
     function (accessToken, refreshToken, profile, done) {
       profile.accessToken = accessToken; // Store the access token in the profile

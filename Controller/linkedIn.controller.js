@@ -8,7 +8,7 @@ const REDIRECT_URI = process.env.LINKEDIN_REDIRECT_URI;
 
 const FACEBOOK_APP_ID = process.env.FACEBOOK_APP_ID;
 const FACEBOOK_APP_SECRET = process.env.FACEBOOK_APP_SECRET;
-const INSTA_REDIRECT_URI = "http://localhost:4000/instagram/callback";
+const INSTA_REDIRECT_URI = "https://content-flow-backend.vercel.app/instagram/callback";
 
 exports.linkedinCallback = async (req, res) => {
   const code = req.query.code;
