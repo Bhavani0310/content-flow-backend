@@ -13,7 +13,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: ["http://localhost:5173","https://content-flow-alpha.vercel.app"],
     methods: ["GET", "POST", "OPTIONS","PUT","DELETE"],
     credentials: true,
   })
